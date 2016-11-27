@@ -1,0 +1,9 @@
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\bin\Debug\CommanderVote.exe
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\bin\Debug\CommanderVote.pdb
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.csprojResolveAssemblyReference.cache
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.Form1.resources
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.Properties.Resources.resources
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.csproj.GenerateResource.Cache
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.exe
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\obj\Debug\CommanderVote.pdb
+C:\Users\MAH\Documents\Visual Studio 2015\Projects\CommanderVote\CommanderVote\bin\Debug\MySql.Data.dll
