@@ -19,6 +19,8 @@ namespace CommanderVote
         List<CommanderList> commanderList = new List<CommanderList>();
         List<string> candidatesList = new List<string>();
 
+        AppManager appManager = new AppManager();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +28,13 @@ namespace CommanderVote
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            StartThreading();
+        }
+
+        public void StartThreading()
+        {
+            Thread thread = new Thread(new ThreadStart(appManager.ChangeVotesToPending));
+            thread.Start();
         }
 
         public void GetGroups()
@@ -119,17 +127,22 @@ namespace CommanderVote
             timerCommanderVotePause.Enabled = true;
         }
 
+        /// <summary>
+        /// Kollar om nya grupper har dykt upp
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timerNewGroupPause_Tick(object sender, EventArgs e)
         {
-            GetGroups();
+            //GetGroups();
 
-            if(dbManager.listCommander.Count > 0)
-            {              
-                timerNewGroupPause.Enabled = false;
-                timerNewGroupPause.Interval = 15000;
-                timerCheckVoteStatus.Enabled = true;
-                dbManager.ChangeToPending();
-            }
+            //if(dbManager.listCommander.Count > 0)
+            //{              
+            //    timerNewGroupPause.Enabled = false;
+            //    timerNewGroupPause.Interval = 15000;
+            //    timerCheckVoteStatus.Enabled = true;
+            //    dbManager.ChangeToPending();
+            //}
         }
 
         /// <summary>
@@ -139,10 +152,10 @@ namespace CommanderVote
         /// <param name="e"></param>
         private void timerCommanderVotePause_Tick(object sender, EventArgs e)
         {
-            timerCommanderVotePause.Enabled = false;
-            timerCommanderVotePause.Interval = 30000;
-            dbManager.ChangeToPending();
-            timerCheckVoteStatus.Enabled = true;
+            //timerCommanderVotePause.Enabled = false;
+            //timerCommanderVotePause.Interval = 30000;
+            //dbManager.ChangeToPending();
+            //timerCheckVoteStatus.Enabled = true;
         }  
 
         /// <summary>
@@ -152,7 +165,7 @@ namespace CommanderVote
         /// <param name="e"></param>
         private void timerCheckVoteStatus_Tick(object sender, EventArgs e)
         {
-            StartVoting();
+            //StartVoting();
         }
     }
 }
